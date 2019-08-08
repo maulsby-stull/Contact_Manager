@@ -16,7 +16,7 @@ public class Main {
         String response;
 
         List<String> contacts = new ArrayList<>();
-        Path contactPath = Paths.get("src/data", "contact.txt");
+        Path contactPath = Paths.get("src/data", "contacts.txt");
 
         contacts = Files.readAllLines(contactPath);
         System.out.println("Name                 |              Phone number\n" +
