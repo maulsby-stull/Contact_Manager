@@ -14,9 +14,17 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         String response;
-
         List<String> contacts = new ArrayList<>();
         Path contactPath = Paths.get("src/data", "contacts.txt");
+
+        System.out.println("    ______   ______   .__   __. .___________.    ___       ______ .___________.    _______.\n" +
+                "   /      | /  __  \\  |  \\ |  | |           |   /   \\     /      ||           |   /       |\n" +
+                "  |  ,----'|  |  |  | |   \\|  | `---|  |----`  /  ^  \\   |  ,----'`---|  |----`  |   (----`\n" +
+                "  |  |     |  |  |  | |  . `  |     |  |      /  /_\\  \\  |  |         |  |        \\   \\    \n" +
+                "  |  `----.|  `--'  | |  |\\   |     |  |     /  _____  \\ |  `----.    |  |    .----)   |   \n" +
+                "   \\______| \\______/  |__| \\__|     |__|    /__/     \\__\\ \\______|    |__|    |_______/    \n" +
+                "2                                                                                           ");
+
 
         contacts = Files.readAllLines(contactPath);
         System.out.println("Name                 |              Phone number\n" +
@@ -147,7 +155,7 @@ public class Main {
                         System.out.println("Impossible, Perhaps the archives are incomplete?!");
                     }
                     String phonenum = "";
-                    System.out.println("What name would you like add?");
+                    System.out.println("What name would you like change the existing contact to?");
                     String Name = scanner.nextLine();
                     System.out.println("What is their phone number?");
                     String phonenumber = scanner.nextLine();
